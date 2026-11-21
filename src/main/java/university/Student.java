@@ -1,37 +1,36 @@
-package university;
+package main.java.university;
+
+import main.java.university.Globals.Role;
+import main.java.university.Globals.ActiveStatus;
 
 public class Student extends User {
-    private Globals.StudyMode studyMode;
-    private Globals.StudyLevel studyLevel;
-    private boolean international;
+
+    private String type;
+    private String gender;
 
     public Student(int id, String firstName, String lastName,
                    String email, String department,
-                   Globals.StudyMode studyMode,
-                   Globals.StudyLevel studyLevel,
-                   boolean international) {
+                   String type, String gender, ActiveStatus active) {
 
-        super(id, firstName, lastName, email, department);
+        super(id, firstName, lastName, email, department,
+                Role.STUDENT, active);
 
-        this.studyMode = studyMode;
-        this.studyLevel = studyLevel;
-        this.international = international;
+        this.type = type;
+        this.gender = gender;
     }
 
-    public Globals.StudyMode getStudyMode() {
-        return studyMode;
+    public String getType() {
+        return type;
     }
 
-    public Globals.StudyLevel getStudyLevel() {
-        return studyLevel;
-    }
-
-    public boolean isInternational() {
-        return international;
+    public String getGender() {
+        return gender;
     }
 
     @Override
-    public String getRole() {
-        return "Student";
+    public String toString() {
+        return super.toString()
+                + " | Type: " + type
+                + " | Gender: " + gender;
     }
 }
