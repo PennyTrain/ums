@@ -1,4 +1,4 @@
-package university;
+package main.java.university;
 
 public final class Globals {
 
@@ -20,5 +20,16 @@ public final class Globals {
         ACTIVE,
         COMPLETED,
         WITHDRAWN
+    }
+
+    public enum Role {
+        STUDENT,
+        STAFF,
+        ADMIN
+    }
+
+    public enum ActiveStatus {
+        ACTIVE,
+        INACTIVE
     }
 }
