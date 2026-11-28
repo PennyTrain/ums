@@ -1,15 +1,13 @@
 package main.java.university;
 
 import com.google.gson.annotations.SerializedName;
-
 import main.java.university.Globals.Role;
 import main.java.university.Globals.ActiveStatus;
 
 public class Staff extends User {
-
+    // stay in naming conventions
     @SerializedName("weekly_hours")
     private int weeklyHours;
-
     @SerializedName("max_modules")
     private int maxModules;
 
@@ -24,13 +22,8 @@ public class Staff extends User {
         this.maxModules = maxModules;
     }
 
-    public int getWeeklyHours() {
-        return weeklyHours;
-    }
-
-    public int getMaxModules() {
-        return maxModules;
-    }
+    public int getWeeklyHours() { return weeklyHours; }
+    public int getMaxModules() { return maxModules; }
 
     @Override
     public String toString() {

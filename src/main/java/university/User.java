@@ -15,8 +15,7 @@ public abstract class User {
     @SerializedName("last_name")
     private String lastName;
 
-    private String email;
-    private String department;
+    private String email, department;
 
     private Role role;
     private ActiveStatus active;

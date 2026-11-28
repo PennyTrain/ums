@@ -1,9 +1,7 @@
 package main.java.university;
 
 public class Course {
-    private String code;
-    private String name;
-    private String department;
+    private String code, name, department;
 
     public Course(String code, String name, String department) {
         this.code = code;
@@ -14,11 +12,9 @@ public class Course {
     public String getCode() {
         return code;
     }
-
     public String getName() {
         return name;
     }
-
     public String getDepartment() {
         return department;
     }

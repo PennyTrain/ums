@@ -5,8 +5,7 @@ import main.java.university.Globals.ActiveStatus;
 
 public class Student extends User {
 
-    private String type;
-    private String gender;
+    private String type, gender;
 
     public Student(int id, String firstName, String lastName,
                    String email, String department,
