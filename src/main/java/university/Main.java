@@ -7,16 +7,13 @@ import javax.swing.SwingUtilities;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-
         // Load the JSON and receive the list returned by loadUsers().
         ArrayList<User> users = ImportJson.loadUsers();
-
+        ArrayList<Course> courses = ImportJson.loadCourses();
         // Create and display the interface on Swing's UI thread.
         SwingUtilities.invokeLater(() -> {
-
             // Pass the imported list into the window.
-            MainFrame frame = new MainFrame(users);
-
+            MainFrame frame = new MainFrame(users, courses);
             frame.setVisible(true);
         });
     }
